@@ -41,7 +41,7 @@ namespace RP0
         public bool IsMassWithinUpAndDowngradeMargins => IsMassWithinUpgradeMargin && IsMassWithinDowngradeMargin;
         public static float CalcMassMin(float massMax) => massMax == float.MaxValue ? 0f : Mathf.Floor(massMax * 0.75f);
         public float MassMin => CalcMassMin(massMax);
-        public static float CalcMassMaxFromMin(float massMin) => Mathf.Ceil(massMin / 0.75f);
+        public static float CalcMassMaxFromMin(float massMin) => Mathf.Ceil(massMin / 0.25f);
 
         public static readonly LCData StartingHangar = new LCData("Hangar", float.MaxValue, float.MaxValue, new Vector3(40f, 10f, 40f), LaunchComplexType.Hangar, true, new PersistentDictionaryValueTypes<string, double>());
 
